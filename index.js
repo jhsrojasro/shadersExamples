@@ -5,7 +5,7 @@ const port = 3000;
 app.use(express.static('./public'));
 
 app.get('/', (req, res) => {
-  res.sendFile('pages/texturing.html')
+  res.sendFile('public/pages/index.html')
 });
 
 app.listen(port, () => {
