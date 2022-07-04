@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
+        <script src="../sketches/libraries/p5.shaderbox.js"></script>
+        <script src="../sketches/libraries/p5.quadrille.js"></script>
+    </head>
+    <body>
+        <h1> Fotomosaico por hardware </h1>
+        
+        <h2> Explicación fotomosaico por hardware </h2>
+
+        <p style="text-align:left;">
+        La implementación del fotomosaico se puede realizar a través de hardware, es decir, la construcción de un algoritmo que se encargue de convertir la imagen original en un mosaico de otras.    
+        En este ejercicio por hardware hacemos uso de varias fuentes para aplicar el fotomosaico como lo es la imagen de Cristiano Ronaldo, un video montado dentro del repositorio y tambien se puede hacer uso del video que se obtiene desde la camara del computador.
+        En la funcion `preload` definimos el fragmento a usar demoninado `photomosaic.frag`, a partir de ahi al mosaico final vamos a definir ciertos parametros que van a ser obtenidos al momento de recorrer la imagen, aqui se comparan los texeles del color promedio que posee cada pixel de la imagen o video original.
+        Los colores promedio de la imagen original son comparados con la imagen devuelta por el quadrille, haciendo uso de una tolerancia que va aumentando hasta encontrar el color mas cercano al del original y de esta forma ese color encontrado es el que se usa para llenar en la imagen que se muestra como resultado.
+        </p>
+        <script src="../sketches/photomosaic.js"></script><p></p>
+        
+        Al igual tanto al resultado como previsualización en ambos ejercicios (hardware/software) se le agrego una estadistíca de frames por segundo para comparar los ejercicios.
+    </body>
+</html>
